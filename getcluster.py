@@ -22,6 +22,7 @@ def cluster(coordinates, hours, days):
     points = coordinates
     k = days
     #init clusters randomly
+    centroids = numpy.random.random_sample((days, 2))
 
     return 0
 
@@ -39,3 +40,5 @@ print(myhours)
 #generate days for trip
 mydays = numpy.random.random_integers(0, 7)
 print(mydays)
+
+cluster(mydata,myhours,mydays)
