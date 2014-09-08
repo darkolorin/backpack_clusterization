@@ -1,6 +1,7 @@
 __author__ = 'olorin'
 import numpy
 import time
+import matplotlib.pyplot as plt
 
 
 #Get execution time of a function
@@ -27,7 +28,7 @@ def cluster(coordinates, hours, days):
     return 0
 
 #Generation parameters
-number_of_points = 5
+number_of_points = 20
 
 #create dataset of points in format [(x,y),...]
 mydata = numpy.random.random_sample((number_of_points, 2))
@@ -41,4 +42,9 @@ print(myhours)
 mydays = numpy.random.random_integers(0, 7)
 print(mydays)
 
+#draw points
+plt.scatter([p[0] for p in mydata], [p[1] for p in mydata])
+plt.show()
+
+#call function
 cluster(mydata,myhours,mydays)
