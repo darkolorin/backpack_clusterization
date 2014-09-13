@@ -64,15 +64,15 @@ number_of_points = 10
 
 #create dataset of points in format [(x,y),...]
 mydata = numpy.random.random_sample((number_of_points, 2))
-#print(mydata)
+print(mydata)
 
 #generate time to spent for each point
 myhours = numpy.random.random_integers(3, size=(number_of_points, 1.))
-#print(myhours)
+print(myhours)
 
 #generate days for trip
 mydays = numpy.random.random_integers(0, 7)
-#print(mydays)
+print(mydays)
 
 #call function
 cluster(mydata,myhours,mydays, 10)
